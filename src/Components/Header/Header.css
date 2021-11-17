@@ -1,0 +1,25 @@
+.my-btn {
+    background-color: #FEB800;
+    color: black;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 0;
+}
+.my-btn:hover{
+    background-color: #fff;
+    
+    font-weight: bold;
+    color: black;
+    border-radius: 0;
+}
+.nav-NavLink{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #fff;
+    padding: auto 10px;
+    
+}
+a:hover{
+    color: #F34E3A;
+}

@@ -1,0 +1,40 @@
+.about-section{
+    padding: 100px 0;
+    background-color: #EADAC6;
+}
+.about-sub-title{
+    color: #F34E3A;
+    letter-spacing: 1px;
+}
+.about-card{
+    position: relative;
+    cursor: pointer;
+}
+.about-img{
+    width: 330px;
+    background-color: #111111;
+    margin: 0 auto;
+}
+.about-img img{
+    width: 330px;
+}
+.about-info {
+    width: 330px;
+    position: absolute;
+    top: 38%;
+    display: none; 
+
+}
+.about-info i{
+    margin: 0 10px;
+    color: #fff;
+}
+
+.about-card:hover .about-info{
+    display: block;
+ 
+}
+.about-card:hover .about-img img{
+    opacity: 0.5;
+    transition: .5s; 
+}
