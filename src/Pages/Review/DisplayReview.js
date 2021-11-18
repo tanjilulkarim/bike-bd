@@ -19,35 +19,32 @@ const DisplayReview = () => {
             </h2>
 
             <div className="row">
+
                 {
-                    reviews.map(review => <div className="col-lg-4">
-                        <div style={{ height: "300px", borderRadius: "20px" }} class="card mb-3 p-5 text-center">
-                            <img src={review.img}
-                                class="rounded-circle mx-auto"
-                                width="75px"
-                                height="75px"
-                                alt="..." />
-                            <div class="card-body">
+                    reviews.map(review =>
+                        <div className="col-lg-4">
+                            <div style={{ height: "300px", borderRadius: "20px" }} class="card mb-3 p-5 text-center">
+                                <img src={review.img}
+                                    class="rounded-circle mx-auto"
+                                    width="75px"
+                                    height="75px"
+                                    alt="..." />
+                                <div class="card-body">
 
-                                <Rating
-                                    className="text-warning mb-2"
-                                    initialRating={review.star}
+                                    <Rating
+                                        className="text-warning mb-2"
+                                        initialRating={review.star}
 
-                                    readonly
-                                    emptySymbol="fa fa-star-o fa-2x fs-6"
-                                    fullSymbol="fa fa-star fa-2x fs-6"
-                                />
-                                {/* <Rating
-                                    initialRating={3}
-                                    readonly
-                                    emptySymbol="fa fa-star-o fa-2x"
-                                    fullSymbol="fa fa-star fa-2x"
-                                /> */}
-                                <h5>{review.name}</h5>
-                                <p class="card-text">"{review.dec}"</p>
+                                        readonly
+                                        emptySymbol="fa fa-star-o fa-2x fs-6"
+                                        fullSymbol="fa fa-star fa-2x fs-6"
+                                    />
+
+                                    <h5>{review.name}</h5>
+                                    <p class="card-text">"{review.dec}"</p>
+                                </div>
                             </div>
-                        </div>
-                    </div>)
+                        </div>)
                 }
             </div>
 

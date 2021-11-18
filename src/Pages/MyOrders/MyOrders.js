@@ -52,19 +52,19 @@ const MyOrders = () => {
     history.push("/home");
   };
   return (
-    <div className="my-section">
+    <div className="my-section mt-5">
       <h3 className="text-center text-dark">My Orders</h3>
 
       {!orders.length ? (
         <div className="text-center">
-          <h4 className="title ">
+          <h4 className=" text-dark" >
             {" "}
-            Book Some Toys
+            Book a bike
             <br /> Or <br />
             Please Wait...
           </h4>
-          <button onClick={handleClick} className="btn my-btn">
-            Book Tour
+          <button onClick={handleClick} className="btn my-btn mb-5">
+            Book bike
           </button>
         </div>
       ) : (

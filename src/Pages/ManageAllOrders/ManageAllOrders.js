@@ -73,7 +73,7 @@ const ManageAllOrders = () => {
                   src={order.item.img}
                   className=" rounded-start"
                   alt="..."
-                  width="150px"
+                  width="170px"
                   style={{ marginTop: "45px" }}
                 />
               </div>
@@ -83,7 +83,7 @@ const ManageAllOrders = () => {
                     User Name : {order.name}
                   </h6>
                   <p className="text-dark my-2 ">User email : {order.email}</p>
-                  <h6 className=" text-dark my-2 ">Toy Name : {order.item.name}</h6>
+                  <h6 className=" text-dark my-2 ">Bike Name : {order.item.name}</h6>
 
                   <p className="text-dark my-2">Quantity : {order.quantity} </p>
                   <p

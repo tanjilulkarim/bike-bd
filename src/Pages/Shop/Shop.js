@@ -44,11 +44,11 @@ const Shop = () => {
               <div className="col-lg-4 text-center">
                 <div className="card my-card border-0">
                   <div className="text-center">
-                    <img src={product.img} className="card-img" alt="..." />
+                    <img src={product.img} className="card-img" height="200px" width="400px" alt="..." />
                   </div>
                   <div className="card-body text-center">
                     <h5 className="my-title">{product.name}</h5>
-                    <p className="my-text my-2">{product.dec}</p>
+                    <p className="my-text my-2">{product.dec.slice(1, 100)}</p>
                     <h3 className="fw-light">$ {product.price}</h3>
                     <button
                       onClick={() => buyNow(product._id)}

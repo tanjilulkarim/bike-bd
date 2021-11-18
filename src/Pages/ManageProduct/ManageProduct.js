@@ -46,7 +46,7 @@ const ManageProduct = () => {
     <div className="my-section pt-5">
       <div className="container">
 
-        <h2 className=" title text-center pb-5">
+        <h2 className=" title text-center text-dark pb-5">
           Manage All Products
         </h2>
         {!products.length ? (
@@ -72,7 +72,7 @@ const ManageProduct = () => {
                   </div>
                   <div className="card-body">
                     <h5 className="card-title">{product.name}</h5>
-                    <p className="card-text">{product.dec}</p>
+                    <p className="card-text">{product.dec.slice(1, 100)}</p>
                     <p>$ {product.price}</p>
                     <button
                       onClick={() => handleDelete(product._id)}

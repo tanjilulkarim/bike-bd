@@ -18,58 +18,62 @@ import MakeAdmin from './Pages/MakeAdmin/MakeAdmin';
 import AdminRoute from './AdminRoute/AdminRoute';
 import AddProducts from './Pages/AddProducts/AddProducts';
 import ManageProduct from './Pages/ManageProduct/ManageProduct';
+import PageNotFund from './Pages/PageNotFound/PageNotFound';
 
 function App() {
-  return (
-  <AuthProvider>
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path="/">
-              <Home></Home>
-          </Route>
-          <Route  path="/home">
-              <Home></Home>
-          </Route>
-          <Route  path="/shop">
-              <Shop></Shop>
-          </Route>
-          <PrivateRoute  path="/product/:id">
-              <ProductDetails></ProductDetails>
-          </PrivateRoute>
-          <PrivateRoute path="/pay">
-              <Pay></Pay>
-          </PrivateRoute>
-          <PrivateRoute  path="/myOrders">
-              <MyOrders></MyOrders>
-          </PrivateRoute>
-          <PrivateRoute  path="/review">
-              <Review></Review>
-          </PrivateRoute>
-          <AdminRoute  path="/manageAllOrder">
-              <ManageAllOrders></ManageAllOrders>
-          </AdminRoute>
-          <AdminRoute  path="/manageProduct">
-              <ManageProduct></ManageProduct>
-          </AdminRoute>
-          <AdminRoute  path="/makeAdmin">
-              <MakeAdmin></MakeAdmin>
-          </AdminRoute>
-          <AdminRoute  path="/addProducts">
-              <AddProducts></AddProducts>
-          </AdminRoute>
-           <Route path="/login">
-            <Login></Login>
-          </Route>
-          <Route path="/register">
-         <Register></Register>
-        </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
-       </AuthProvider>
-   
-  );
+    return (
+        <AuthProvider>
+            <Router>
+                <Header></Header>
+                <Switch>
+                    <Route exact path="/">
+                        <Home></Home>
+                    </Route>
+                    <Route path="/home">
+                        <Home></Home>
+                    </Route>
+                    <Route path="/shop">
+                        <Shop></Shop>
+                    </Route>
+                    <PrivateRoute path="/product/:id">
+                        <ProductDetails></ProductDetails>
+                    </PrivateRoute>
+                    <PrivateRoute path="/pay">
+                        <Pay></Pay>
+                    </PrivateRoute>
+                    <PrivateRoute path="/myOrders">
+                        <MyOrders></MyOrders>
+                    </PrivateRoute>
+                    <PrivateRoute path="/review">
+                        <Review></Review>
+                    </PrivateRoute>
+                    <AdminRoute path="/manageAllOrder">
+                        <ManageAllOrders></ManageAllOrders>
+                    </AdminRoute>
+                    <AdminRoute path="/manageProduct">
+                        <ManageProduct></ManageProduct>
+                    </AdminRoute>
+                    <AdminRoute path="/makeAdmin">
+                        <MakeAdmin></MakeAdmin>
+                    </AdminRoute>
+                    <AdminRoute path="/addProducts">
+                        <AddProducts></AddProducts>
+                    </AdminRoute>
+                    <Route path="/login">
+                        <Login></Login>
+                    </Route>
+                    <Route path="*">
+                        <PageNotFund></PageNotFund>
+                    </Route>
+                    <Route path="/register">
+                        <Register></Register>
+                    </Route>
+                </Switch>
+                <Footer></Footer>
+            </Router>
+        </AuthProvider>
+
+    );
 }
 
 export default App;

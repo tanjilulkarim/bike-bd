@@ -39,11 +39,11 @@ const DisplayProducts = () => {
               <div className="col-lg-4 text-center">
                 <div className="card my-card border-0">
                   <div className="text-center">
-                    <img src={product.img} className="" alt="..." />
+                    <img src={product.img} height="200px" width="400px" className="" alt="..." />
                   </div>
                   <div className="card-body">
                     <h5 className="card-title">{product.name}</h5>
-                    <p className="card-text">{product.dec}</p>
+                    <p className="card-text">{product.dec.slice(1, 100)}</p>
                     <p>$ {product.price}</p>
                     <button
                       onClick={() => buyNow(product._id)}
