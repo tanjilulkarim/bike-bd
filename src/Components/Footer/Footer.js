@@ -1,15 +1,15 @@
 import React from "react";
 import "./Footer.css";
-import logo from "../../img/logo.png";
+// import logo from "../../img/logo.png";
 import { NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="footer-section">
       <div className="container">
-        
+
         <div className="row text-white footer-info">
           <div className="col-lg-2">
-            <img src={logo} width="180px" alt="" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9bDvV4CEyO1EdrUbL22_aJSo_IDCyX-exhr5MpihY_8yj8pG7VWO1FiZ51YKsJDkJRIM&usqp=CAU" width="180px" alt="" />
             <p className=" my-3 text-white-50">@2021</p>
           </div>
           <div className="col-lg-2">
@@ -73,7 +73,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-        <p className="text-muted text-center mt-5 mb-0">Copyright © 2021 Sanjid Haq. All Rights Reserved.</p>
+      <p className="text-muted text-center mt-5 mb-0">Copyright © 2021 Tanjilul karim. All Rights Reserved.</p>
     </footer>
   );
 };

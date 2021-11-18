@@ -12,14 +12,14 @@ const Review = () => {
   const { firebaseContext } = useAuth();
   const { user } = firebaseContext;
 
-  const onSubmit = (data) =>{ 
-    fetch("https://tranquil-cove-79684.herokuapp.com/review", {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
+  const onSubmit = (data) => {
+    fetch("https://blooming-sierra-92495.herokuapp.com/review", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
       .then(res => res.json())
       .then((result) => {
         if (result.insertedId) {
@@ -28,15 +28,15 @@ const Review = () => {
         } else {
         }
       });
-    };
+  };
 
   return (
     <div className="from-section text-center">
-         <h3 className="fw-bold text-center">Add a Review</h3>
+      <h3 className="fw-bold text-center">Add a Review</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
-      {errors.star && <span>Please type Number between 0-5</span>}
+        {errors.star && <span>Please type Number between 0-5</span>}
         <input
-        autoFocus
+          autoFocus
           placeholder="Your Name"
           defaultValue={user.displayName}
           {...register("name", { required: true })}
@@ -45,10 +45,11 @@ const Review = () => {
           placeholder="Your Image"
           {...register("img", { required: true })}
         />
-         
-        <input 
-        placeholder="star between 0-5"
-        type="number" {...register("star", { min: 0, max: 5 })} />
+
+        <input
+          placeholder="star between 0-5"
+          type="number" {...register("star", { min: 0, max: 5 })} />
+
         <textarea
           name="Description"
           id=""

@@ -10,7 +10,7 @@ const MyOrders = () => {
   const [orders, setOrders] = useState([]);
   const [isDelete, setIsDelete] = useState(null);
   useEffect(() => {
-    fetch(`https://tranquil-cove-79684.herokuapp.com/myOrders/${email}`)
+    fetch(`https://blooming-sierra-92495.herokuapp.com/myOrders/${email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [isDelete, email]);
@@ -26,7 +26,7 @@ const MyOrders = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://tranquil-cove-79684.herokuapp.com/deleteOrders/${id}`, {
+        fetch(`https://blooming-sierra-92495.herokuapp.com/deleteOrders/${id}`, {
           method: "DELETE",
           headers: { "Content-type": "application/json" },
         })
@@ -53,7 +53,7 @@ const MyOrders = () => {
   };
   return (
     <div className="my-section">
-      <h3 className="text-center ">My Orders</h3>
+      <h3 className="text-center text-dark">My Orders</h3>
 
       {!orders.length ? (
         <div className="text-center">
@@ -83,7 +83,7 @@ const MyOrders = () => {
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
-                     
+
                       <h5 className="fw-bold my-color my-2">
                         <i class="fas fa-map-marker-alt"></i> {order.item.name}
                       </h5>

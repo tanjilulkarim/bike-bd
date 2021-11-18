@@ -7,7 +7,7 @@ import "./Shop.css";
 const Shop = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://tranquil-cove-79684.herokuapp.com/products")
+    fetch("https://blooming-sierra-92495.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -20,8 +20,8 @@ const Shop = () => {
   return (
     <div className="my-section pt-5">
       <div className="container">
-        <p className="my-color">Amazing Offers</p>
-        <h2 className=" title">
+        <h5 className="my-color text-dark">Amazing Offers</h5>
+        <h2 className="text-dark title">
           Special Deals And Last Minute <br />
           Amazing Offers
         </h2>
@@ -44,7 +44,7 @@ const Shop = () => {
               <div className="col-lg-4 text-center">
                 <div className="card my-card border-0">
                   <div className="text-center">
-                  <img src={product.img} className="card-img" alt="..." />
+                    <img src={product.img} className="card-img" alt="..." />
                   </div>
                   <div className="card-body text-center">
                     <h5 className="my-title">{product.name}</h5>

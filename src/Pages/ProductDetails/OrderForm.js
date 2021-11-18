@@ -18,7 +18,7 @@ const OrderForm = (props) => {
   const onSubmit = (data) => {
     data.status = "pending";
     data.item = product;
-    fetch("https://tranquil-cove-79684.herokuapp.com/orders", {
+    fetch("https://blooming-sierra-92495.herokuapp.com/orders", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -45,7 +45,7 @@ const OrderForm = (props) => {
       <form onSubmit={handleSubmit(onSubmit)}>
         {errors.tickets && (
           <span className="fw-bold">
-         Number, Date, Tickets  required
+            Number, Date, Tickets  required
           </span>
         )}
         <input
@@ -58,7 +58,7 @@ const OrderForm = (props) => {
           defaultValue={user?.email}
           {...register("email", { required: true })}
         />
-        
+
         <input
           placeholder="Phone"
           {...register("number", { required: true })}
@@ -74,7 +74,7 @@ const OrderForm = (props) => {
           {...register("product", { required: true })}
         />
 
-        
+
         <input className="submit-btn" type="submit" />
       </form>
     </div>

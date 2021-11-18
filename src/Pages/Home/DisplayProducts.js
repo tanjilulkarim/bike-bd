@@ -4,7 +4,7 @@ import { useHistory } from "react-router";
 const DisplayProducts = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
-    fetch("https://tranquil-cove-79684.herokuapp.com/products")
+    fetch("https://blooming-sierra-92495.herokuapp.com/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
@@ -16,10 +16,9 @@ const DisplayProducts = () => {
   return (
     <div className="my-section pt-5">
       <div className="container">
-        <p className="my-color text-center">Amazing Offers</p>
-        <h2 className=" title text-center pb-5">
-          Special Deals And Last Minute 
-          Amazing Offers
+        <h5 className="my-color text-center text-dark">Our Special Offers</h5>
+        <h2 className=" title text-center pb-5 text-dark">
+          Our available products you can choice Your favorite bike
         </h2>
         {!products.length ? (
           <div className="text-center">

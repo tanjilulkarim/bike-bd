@@ -1,0 +1,19 @@
+.addProduct_form{
+    background: #fff;
+    width: 350px;
+    margin: 40px auto;
+    padding: 40px 0;
+    border-radius: 6px;
+}
+.addProduct_form input{
+    background-color: #fff;
+        color: #777;
+
+}
+.addProduct_form textarea{
+    background-color: #fff;
+     color: #777;
+}
+.addProduct_form input.addProductbtn{
+    background-color: turquoise;
+}

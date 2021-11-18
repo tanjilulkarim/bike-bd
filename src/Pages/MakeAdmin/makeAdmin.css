@@ -1,0 +1,17 @@
+.from-section-2.makeAdmin{
+    background-color: #fff;
+}
+.makeAdminForm{
+    background-color: #deeaee; 
+    width: 70%;  
+    margin: 10px auto;
+    padding: 20px; 
+    border-radius: 10px;
+}
+.makeAdminBtn{
+    background-color: #fff;
+    border-radius: 5px;
+}
+.makeAdminBtn:hover{
+    border-radius: 5px;
+}

@@ -6,7 +6,7 @@ const ManageAllOrders = () => {
   const [isDelete, setIsDelete] = useState(null);
   const [isUpdate, setIsUpdated] = useState(null);
   useEffect(() => {
-    fetch("https://tranquil-cove-79684.herokuapp.com/allOrders")
+    fetch("https://blooming-sierra-92495.herokuapp.com/allOrders")
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, [isDelete, isUpdate]);
@@ -21,7 +21,7 @@ const ManageAllOrders = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://tranquil-cove-79684.herokuapp.com/deleteOrders/${id}`, {
+        fetch(`https://blooming-sierra-92495.herokuapp.com/deleteOrders/${id}`, {
           method: "DELETE",
           headers: { "Content-type": "application/json" },
         })
@@ -43,7 +43,7 @@ const ManageAllOrders = () => {
     });
   };
   const approveOrders = (id) => {
-    fetch(`https://tranquil-cove-79684.herokuapp.com/update/${id}`, {
+    fetch(`https://blooming-sierra-92495.herokuapp.com/update/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application.json",
@@ -57,16 +57,16 @@ const ManageAllOrders = () => {
         } else {
           setIsUpdated(false);
         }
-        
+
       });
   };
-  
+
   return (
     <div className="my-section">
-      <h3 className="text-center  py-3">Manage All Orders</h3>
+      <h3 className="text-center text-dark  py-3">Manage All Orders</h3>
       {orders.map((order) => (
-        <div className="col-lg-6 mx-auto">
-          <div className="service-card-2 card my-bg mb-3 ">
+        <div className="col-lg-6 py-5 mx-auto">
+          <div className="service-card-2 mb-3  card my-bg mb-3 ">
             <div className="row g-0">
               <div className="col-md-4 text-center">
                 <img
@@ -74,17 +74,18 @@ const ManageAllOrders = () => {
                   className=" rounded-start"
                   alt="..."
                   width="150px"
+                  style={{ marginTop: "45px" }}
                 />
               </div>
               <div className="col-md-6">
                 <div className="py-2">
-                  <h6 className="card-title mt-2  mb-0">
+                  <h6 className="text-dark card-title mt-2  mb-0">
                     User Name : {order.name}
                   </h6>
-                  <p className=" my-2 ">User email : {order.email}</p>
-                  <h6 className=" my-2 ">Toy Name : {order.item.name}</h6>
-                  
-                  <p className=" my-2">Quantity : {order.quantity} </p>
+                  <p className="text-dark my-2 ">User email : {order.email}</p>
+                  <h6 className=" text-dark my-2 ">Toy Name : {order.item.name}</h6>
+
+                  <p className="text-dark my-2">Quantity : {order.quantity} </p>
                   <p
                     className={
                       order.status === "pending"

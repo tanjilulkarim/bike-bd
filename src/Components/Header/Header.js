@@ -2,12 +2,12 @@ import React from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
-import logo from "../../img/logo.png";
+// import logo from "../../img/logo.png";
 import "./Header.css";
 
 const Header = () => {
   const { firebaseContext } = useAuth();
-  const { user, Logout,admin } = firebaseContext;
+  const { user, Logout, admin } = firebaseContext;
   const history = useHistory();
   const handleClick = () => {
     history.push("/login");
@@ -18,7 +18,7 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
           <NavLink to="/">
-            <img src={logo} width="80px" alt="" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9bDvV4CEyO1EdrUbL22_aJSo_IDCyX-exhr5MpihY_8yj8pG7VWO1FiZ51YKsJDkJRIM&usqp=CAU" width="50px" height="50px" alt="" />
           </NavLink>
           <button
             className="navbar-toggler"
@@ -36,7 +36,7 @@ const Header = () => {
               <li className="nav-item">
                 <NavLink
                   to="/home"
-                  activeStyle={{ color: "#FEB800" }}
+                  activeStyle={{ color: "turquoise" }}
                   className="nav-link nav-NavLink active "
                 >
                   Home
@@ -44,7 +44,7 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <NavLink
-                  activeStyle={{ color: "#FEB800" }}
+                  activeStyle={{ color: "turquoise" }}
                   className="nav-link  nav-NavLink active"
                   to="/shop"
                 >
@@ -73,80 +73,80 @@ const Header = () => {
                       Dashboard
                     </NavLink>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                     {!admin &&  <NavLink
-                      style={{color: "black"}}
-                        activeStyle={{ color: "#FEB800" }}
+                      {!admin && <NavLink
+                        style={{ color: "black" }}
+                        activeStyle={{ color: "turquoise" }}
                         className="nav-link active nav-NavLink"
                         to="/pay"
                       >
                         pay
                       </NavLink>}
 
-                     {!admin && <NavLink
-                      style={{color: "black"}}
-                      activeStyle={{ color: "#FEB800" }}
-                      className="nav-link active nav-NavLink"
-                      to="/myOrders"
-                    >
-                      My Orders
-                    </NavLink>}
-                     
-                     {!admin && <NavLink
-                      style={{color: "black"}}
-                      activeStyle={{ color: "#FEB800" }}
-                      className="nav-link active nav-NavLink"
-                      to="/review"
-                    >
-                      Review
-                    </NavLink>}
-                      
-                    { admin && 
-                    <>
-                   
-                   <NavLink
-                      style={{color: "black"}}
-                      activeStyle={{ color: "#FEB800" }}
-                      className="nav-link active nav-NavLink"
-                      to="/manageAllOrder"
-                    >
-                      All Orders
-                      </NavLink>
-                   <NavLink
-                      style={{color: "black"}}
-                      activeStyle={{ color: "#FEB800" }}
-                      className="nav-link active nav-NavLink"
-                      to="/addProducts"
-                    >
-                      Add a Products
-                      </NavLink>
-                   <NavLink
-                      style={{color: "black"}}
-                      activeStyle={{ color: "#FEB800" }}
-                      className="nav-link active nav-NavLink"
-                      to="/manageProduct"
-                    >
-                      Manage Products
-                      </NavLink>
-                      <NavLink
-                      style={{color: "black"}}
-                      activeStyle={{ color: "#FEB800" }}
-                      className="nav-link active nav-NavLink"
-                      to="/makeAdmin"
-                    >
-                      Make Admin
-                    </NavLink>
-                    </>
-                    }
-                     <li onClick={Logout} className=" btn ">
-                     Log Out
-                  </li>
-                    
+                      {!admin && <NavLink
+                        style={{ color: "black" }}
+                        activeStyle={{ color: "turquoise" }}
+                        className="nav-link active nav-NavLink"
+                        to="/myOrders"
+                      >
+                        My Orders
+                      </NavLink>}
+
+                      {!admin && <NavLink
+                        style={{ color: "black" }}
+                        activeStyle={{ color: "turquoise" }}
+                        className="nav-link active nav-NavLink"
+                        to="/review"
+                      >
+                        Review
+                      </NavLink>}
+
+                      {admin &&
+                        <>
+
+                          <NavLink
+                            style={{ color: "black" }}
+                            activeStyle={{ color: "turquoise" }}
+                            className="nav-link active nav-NavLink"
+                            to="/manageAllOrder"
+                          >
+                            All Orders
+                          </NavLink>
+                          <NavLink
+                            style={{ color: "black" }}
+                            activeStyle={{ color: "turquoise" }}
+                            className="nav-link active nav-NavLink"
+                            to="/addProducts"
+                          >
+                            Add a Products
+                          </NavLink>
+                          <NavLink
+                            style={{ color: "black" }}
+                            activeStyle={{ color: "turquoise" }}
+                            className="nav-link active nav-NavLink"
+                            to="/manageProduct"
+                          >
+                            Manage Products
+                          </NavLink>
+                          <NavLink
+                            style={{ color: "black" }}
+                            activeStyle={{ color: "turquoise" }}
+                            className="nav-link active nav-NavLink"
+                            to="/makeAdmin"
+                          >
+                            Make Admin
+                          </NavLink>
+                        </>
+                      }
+                      <li onClick={Logout} className=" btn ">
+                        Log Out
+                      </li>
+
                     </ul>
                   </li>
 
                   <li className="nav-item">
                     <NavLink
-                      activeStyle={{ color: "#F34E3A" }}
+                      activeStyle={{ color: "red" }}
                       className="nav-link active nav-NavLink"
                       to="/"
                     >
