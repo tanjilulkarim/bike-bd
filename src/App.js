@@ -62,12 +62,13 @@ function App() {
                     <Route path="/login">
                         <Login></Login>
                     </Route>
-                    <Route path="*">
-                        <PageNotFund></PageNotFund>
-                    </Route>
                     <Route path="/register">
                         <Register></Register>
                     </Route>
+                    <Route path="*">
+                        <PageNotFund></PageNotFund>
+                    </Route>
+
                 </Switch>
                 <Footer></Footer>
             </Router>

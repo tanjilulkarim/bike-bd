@@ -20,10 +20,9 @@ const Shop = () => {
   return (
     <div className="my-section pt-5">
       <div className="container">
-        <h5 className="my-color text-dark">Amazing Offers</h5>
-        <h2 className="text-dark title">
-          Special Deals And Last Minute <br />
-          Amazing Offers
+        <h5 className="my-color text-center text-dark">Our available Offers</h5>
+        <h2 className="text-dark text-center  title">
+          Our speacial Offers for you
         </h2>
         {!products.length ? (
           <div className="text-center">

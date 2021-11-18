@@ -34,7 +34,7 @@ const Footer = () => {
             </NavLink>
             <br />
             <NavLink className="text-decoration-none text-white" to="/">
-              Tour
+              Contect us
             </NavLink>
             <br />
             <NavLink className="text-decoration-none text-white" to="/">
@@ -53,6 +53,7 @@ const Footer = () => {
               {" "}
               <small> Privacy policy </small>
             </p>
+
           </div>
           <div className="col-lg-3">
             <p className="fw-bold mb-1">
@@ -73,7 +74,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <p className="text-muted text-center mt-5 mb-0">Copyright © 2021 Tanjilul karim. All Rights Reserved.</p>
+      <h5 className=" text-dark text-center mt-5 mb-0">Copyright © 2021 Tanjilul karim. All Rights Reserved.</h5>
     </footer>
   );
 };
