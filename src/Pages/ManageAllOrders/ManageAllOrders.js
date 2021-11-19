@@ -60,7 +60,7 @@ const ManageAllOrders = () => {
 
       });
   };
-
+  //gggit 
   return (
     <div className="my-section ">
       <div className="container">
