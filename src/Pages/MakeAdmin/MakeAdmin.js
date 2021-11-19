@@ -35,7 +35,7 @@ const MakeAdmin = () => {
 
   return (
     <div className="from-section-2 makeAdmin text-center">
-      <h3 className="fw-bold text-center py-5">Make a Admin</h3>
+      <h3 className="fw-bold text-center py-5">Make an Admin</h3>
       <form className="makeAdminForm" onSubmit={handleSubmit(onSubmit)}>
         {errors.star && <span>Please type Number between 0-5</span>}
         <input

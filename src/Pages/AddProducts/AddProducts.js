@@ -31,7 +31,7 @@ const AddProducts = () => {
   return (
 
     <div className="from-section text-center">
-      <h3 className="fw-bolder text-center">Add a new Product</h3>
+      <h3 className="fw-bolder text-center">Add a new Bike</h3>
       <form className="addProduct_form" onSubmit={handleSubmit(onSubmit)}>
         {errors.img && (
           <span className="fw-bold">
@@ -60,7 +60,7 @@ const AddProducts = () => {
           {...register("img", { required: true })}
         />
 
-        <input type="submit" className="addProductbtn" />
+        <input type="submit" className="addProductbtn text-white" />
       </form>
     </div>
 

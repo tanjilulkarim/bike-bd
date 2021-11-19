@@ -7,7 +7,7 @@ const About = () => {
         <div className="container">
 
 
-            <div className="row py-5 my-5">
+            <div className="row py-5 mt-5">
                 <img src={'https://www.freepngimg.com/download/welcome/26832-4-welcome-hd.png'} alt="" />
 
                 {/* <h1 className="text-center  mb-5 about-tittle ">Dream Travels</h1> */}

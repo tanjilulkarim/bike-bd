@@ -33,7 +33,7 @@ const Review = () => {
   return (
     <div className="from-section text-center">
       <h3 className="fw-bold text-center">Add a Review</h3>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form className="addProduct_form" onSubmit={handleSubmit(onSubmit)}>
         {errors.star && <span>Please type Number between 0-5</span>}
         <input
           autoFocus
@@ -59,7 +59,7 @@ const Review = () => {
           {...register("dec", { required: true })}
         ></textarea>
 
-        <input type="submit" />
+        <input type="submit" className="addProductbtn text-white" />
       </form>
     </div>
   );

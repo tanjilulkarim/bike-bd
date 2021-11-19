@@ -8,7 +8,7 @@
 }
 .my-card {
   margin: 65px;
-  background-color: #f1f1f1;
+  background-color: #fff;
 }
 .my-card img {
     width: 180px;
@@ -25,7 +25,3 @@ box-shadow: 45px 31px 76px -81px rgba(0,0,0,0.75);
 -webkit-box-shadow: 45px 31px 76px -81px rgba(0,0,0,0.75);
 -moz-box-shadow: 45px 31px 76px -81px rgba(0,0,0,0.75);
 }
-/* .my-title {
-}
-.my-text {
-} */

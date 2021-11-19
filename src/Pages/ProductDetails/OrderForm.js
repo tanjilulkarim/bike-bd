@@ -30,7 +30,7 @@ const OrderForm = (props) => {
         if (result.insertedId) {
           Swal.fire(
             "Good job!",
-            "You booked this product Successfully!",
+            "You order the bike Successfully!",
             "success"
           );
           reset();
@@ -41,7 +41,7 @@ const OrderForm = (props) => {
   };
   return (
     <div className="from-section">
-      <h3 className="fw-bold text-center">Order The Toy</h3>
+      <h3 className="fw-bold text-center">Order The Bike</h3>
       <form onSubmit={handleSubmit(onSubmit)}>
         {errors.tickets && (
           <span className="fw-bold">

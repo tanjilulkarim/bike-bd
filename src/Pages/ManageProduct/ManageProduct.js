@@ -47,7 +47,7 @@ const ManageProduct = () => {
       <div className="container">
 
         <h2 className=" title text-center text-dark pb-5">
-          Manage All Products
+          Manage All Bikes
         </h2>
         {!products.length ? (
           <div className="text-center">
