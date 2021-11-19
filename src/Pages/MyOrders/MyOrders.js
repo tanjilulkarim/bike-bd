@@ -59,12 +59,12 @@ const MyOrders = () => {
         <div className="text-center">
           <h4 className=" text-dark" >
             {" "}
-            Book a bike
+            Order a bike
             <br /> Or <br />
             Please Wait...
           </h4>
           <button onClick={handleClick} className="btn my-btn mb-5">
-            Book bike
+            Order a bike
           </button>
         </div>
       ) : (
@@ -72,11 +72,7 @@ const MyOrders = () => {
           {orders.map((order) => (
             <div className="col-lg-8 col-sm-12 py3 mx-auto">
               <div className="service-card my-bg card shadow ">
-                {/* <div className="col-md-3 col-sm-12 text-center d-flex align-center justify-content-center">
-                    <div>
-                      
-                    </div>
-                  </div> */}
+
                 <div className="card">
                   <img
                     src={order.item.img}
